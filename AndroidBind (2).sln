@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AndroidBind", ".", "{A5B83214-C58D-4B76-A38E-B96F1A31B57D}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/AndroidBind"
+		Debug.AspNetCompiler.PhysicalPath = "..\AndroidBind\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\AndroidBind\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/AndroidBind"
+		Release.AspNetCompiler.PhysicalPath = "..\AndroidBind\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\AndroidBind\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "63028"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "GMAP", "..\GMAP\GMAP\", "{A6112096-F6E3-4839-8604-7E2E975C94B7}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/GMAP"
+		Debug.AspNetCompiler.PhysicalPath = "..\GMAP\GMAP\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\GMAP\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/GMAP"
+		Release.AspNetCompiler.PhysicalPath = "..\GMAP\GMAP\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\GMAP\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52490"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5B83214-C58D-4B76-A38E-B96F1A31B57D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5B83214-C58D-4B76-A38E-B96F1A31B57D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6112096-F6E3-4839-8604-7E2E975C94B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6112096-F6E3-4839-8604-7E2E975C94B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

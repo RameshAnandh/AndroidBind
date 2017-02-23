@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    
+ <script type="text/javascript" 
+ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4IuRFVcMjWo1qWvBrS3v4uvDXcCiq_c4&sensor=false">
+ </script>
+ <script type="text/javascript">
+ $(document).ready(
+ function ()
+  {
+    function GoogleMap() 
+    {
+      var mapOptions = {
+            center: new google.maps.LatLng(markers[0][0].lat, markers[0][0].lng),
+            zoom: 2,
+            mapTypeId: google.maps.MapTypeId.ROADMAP  };
+        var infoWindow = new google.maps.InfoWindow();
+        var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+        for (i = 0; i < markers[0].length; i++) 
+        {
+            var data = markers[0][i];
+            var marker = new google.maps.Marker({position: new google.maps.LatLng(data.lat, data.lng),map: map}); 
+            (function (marker, data)
+             {
+                google.maps.event.addListener(marker, "click", function (e)
+                 {
+                    infoWindow.setContent(data.description);
+                    infoWindow.open(map, marker);
+                });
+            })(marker, data);
+        }
+    } 
+}
+ });
+ 
+ </script>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    SERVICE PROVIDER
+                </h1>
+            </div>
+            <div class="loginDisplay">
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
+                        
+                        <asp:MenuItem NavigateUrl="~/Addressbar.aspx" Text="Address Search" 
+                            Value="Address Search"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/MultipleMarker.aspx" Text="Multiple Markers" 
+                            Value="Multiple Markers"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Geocoding.aspx" Text="GeoCode" Value="GeoCode">
+                        </asp:MenuItem>
+                        
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>
